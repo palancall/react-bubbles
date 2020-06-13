@@ -1,6 +1,9 @@
+// @ts-ignore
 import React, { useState } from "react";
+// @ts-ignore
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
+// @ts-ignore
 import Login from "./components/Login";
 import "./styles.scss";
 
