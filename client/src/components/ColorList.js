@@ -37,11 +37,10 @@ const ColorList = ({ colors, updateColors }) => {
     // where is is saved right now?
   };
 
-  const deleteColor = (e) => {
-    e.preventDefault();
+  const deleteColor = (color) => {
     // make a delete request to delete this color
     axiosWithAuth()
-      .delete(`/api/colors/${colorToEdit.id}`)
+      .delete(`/api/colors/${color.id}`)
       .then((res) => {
         window.location.reload(true);
       })
@@ -114,7 +113,7 @@ const ColorList = ({ colors, updateColors }) => {
           </label>
           <div className="button-row">
             <button type="submit">save</button>
-            <button onClick={deleteColor}>Delete</button>
+
             <button onClick={() => setEditing(false)}>cancel</button>
           </div>
         </form>
